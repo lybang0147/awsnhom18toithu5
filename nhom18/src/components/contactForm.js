@@ -9,14 +9,17 @@ export default function ContactUs() {
     emailjs.sendForm('service_c9gpniu', 'template_eqop94m', e.target, 'user_cyAL4eoo1TbCXBjcAHf3Z')
         .then((result) => {
             console.log(result.text);
+            alert("Email send successfully");
         }, (error) => {
             console.log(error.text);
+            alert("Couldn't send email");
         });
         e.target.reset()
     }
 
     return(
         <div>
+        <strong>Contact to 19110330@student.hcmute.edu.vn</strong> 
             <div className="container">
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
